@@ -24,10 +24,26 @@ li a {
   padding: 0 16px;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+@media all and (max-width: 800px) {
+    h1 {font-size:1rem;}
+}
+
 .banner {
   width: 100%;
   background-color: lightgrey;
   display: inline-block;
+  border: 1px solid red;
+}
+
+.learn-text {
+  border: 1px solid green;
+  float: right;
+  width: 35%;
+  margin-top: 15%;
 }
 
 .students {
@@ -39,29 +55,54 @@ li a {
 
 .start-button {
   color: white;
-  background-color: grey;
+  background-color: black;
   padding: 8px 0;
+  margin: auto;
+  text-align: center;
+  width: 100%;
 }
 
-.practice {
+.practice-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   width: 65%;
-  background-color: white;
-  display: inline-block;
   border: 1px solid red;
+  background-color: white;
 }
 
-.practice h1, .practice p {
-  width: 92%;
-  text-align: left;
-  margin-left: 24px;
+.practice-pic-container {
+  border: 1px solid green;
+}
+
+.practice-text-container {
+  margin: 0 24px;
+  border: 1px solid yellow;
 }
 
 .student {
   width: 92%;
   margin: 32px 24px;
-  float: left;
-  display: inline-block;
 }
+
+/*
+.practice h1, .practice p {
+  width: 92%;
+  text-align: left;
+  margin-left: 24px;
+}
+*/
+
+/* student pic div */
+
+/*
+.student {
+  width: 92%;
+  margin: 32px 24px;
+  float: left;
+  display: inline-flex;
+}
+*/
 
 .orientation-box {
   width: 423px;
@@ -70,6 +111,7 @@ li a {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin: 0;
 }
 
 .orientation-img {
