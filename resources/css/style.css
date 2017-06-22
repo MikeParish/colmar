@@ -1,35 +1,33 @@
-nav {
-  height: 64px;
-  width: 100%
-}
-
-.logo {
-  padding-left: 24px;
-  display: inline;
-}
-
-ul {
-  list-style-type: none;
+* {
   margin: 0;
   padding: 0;
+}
+
+/* top nav bar */
+
+.nav-flex-container {
   width: 100%;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-li {
-  display: inline;
+.nav-container-left {
+  padding-left: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-li a {
-  float: right;
-  padding: 0 16px;
+.nav-container-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-h1 {
-  font-size: 2rem;
-}
-
-@media all and (max-width: 800px) {
-    h1 {font-size:1rem;}
+.nav-link-container {
+  padding: 16px;
 }
 
 .banner {
@@ -47,7 +45,7 @@ h1 {
 }
 
 .students {
-  width: 60%;
+  width: 92%;
   margin: 32px 24px;
   float: left;
   display: inline-block;
@@ -62,16 +60,24 @@ h1 {
   width: 100%;
 }
 
-.practice-container {
+/* container for orientation and practice */
+
+.p-o-container { /* holds flex items */
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+}
+
+/* practice section */
+
+.practice-container { /* holds practice img and text */
+  display: flex;
   flex-direction: column;
   width: 65%;
   border: 1px solid red;
   background-color: white;
 }
 
-.practice-pic-container {
+.practice-img-container {
   border: 1px solid green;
 }
 
@@ -85,47 +91,52 @@ h1 {
   margin: 32px 24px;
 }
 
-/*
-.practice h1, .practice p {
-  width: 92%;
-  text-align: left;
-  margin-left: 24px;
-}
-*/
+/* orientation section */
 
-/* student pic div */
-
-/*
-.student {
-  width: 92%;
-  margin: 32px 24px;
-  float: left;
-  display: inline-flex;
-}
-*/
-
-.orientation-box {
-  width: 423px;
-  height: 168px;
-  border: 1px solid lightgrey;
+.orientation-flex-container { /* holds flex items */
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  margin: 0;
+  border: 1px solid lightgrey;
 }
 
-.orientation-img {
+.orientation-container { /* holds orientation img and text */
+  width: 423px;
+  height: auto;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: row;
+}
+
+.orientation-flex-container-test { /* holds orientation img and text */
+  width: 423px;
+  height: auto;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: lightgrey;
+}
+
+.orientation_img_container { /* holds img */
   width: 35%;
   margin: 16px;
 }
 
-.orientation-box a {
-  padding-top: 8px;
+.orientation-img {
+  width: 100%;
+  border: 1px solid red;
 }
 
-#orientation {
-  display: inline-block;
+.orientation-text-container { /* holds text */
+  width: 65%;
+  border: 1px solid blue;
 }
+
+#sea-captain {
+  background-color: lightgrey;
+}
+
+/* learning section */
 
 .learning {
   border: 1px solid blue;
@@ -154,8 +165,10 @@ h1 {
   width: 266px;
   margin: 16px;
   text-align: left;
-  padding: 32px;
+  padding: 0;
 }
+
+/* thesis section */
 
 .thesis {
   border: 1px solid blue;
@@ -164,6 +177,14 @@ h1 {
   text-align: center;
 }
 
+video {
+  margin: 32px 16px 24px 24px;
+}
+
+/* footer section */
+
 footer {
   border: 1px solid black;
+  height: 100px;
 }
+
