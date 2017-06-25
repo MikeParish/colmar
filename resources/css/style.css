@@ -30,19 +30,23 @@
   padding: 16px;
 }
 
-.banner {
+.nav-container-phone {
   width: 100%;
-  background-color: lightgrey;
-  display: inline-block;
-  border: 1px solid red;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.learn-text {
-  border: 1px solid green;
-  float: right;
-  width: 35%;
-  margin-top: 15%;
+.nav-box-phone {
+  width: 100%;
+  height: 180px;
+  border: 1px solid red;
+  background-color: grey;
 }
+
+/* banner */
 
 .students {
   width: 92%;
@@ -58,6 +62,12 @@
   margin: auto;
   text-align: center;
   width: 100%;
+}
+
+.orientation-text-container-mobile {
+  background-color: lightgrey;
+  padding: 16px;
+  border: 1px solid black;
 }
 
 /* container for orientation and practice */
@@ -136,6 +146,33 @@
   background-color: lightgrey;
 }
 
+/* orientation phone section */
+
+.orientation-flex-container-phone {
+  border: 1px solid blue;
+} 
+
+.orientation-container-phone {
+  border: 1px solid orange;
+} 
+
+.orientation_img_container-phone {
+  border: 1px solid yellow;
+  padding: 16px;
+}
+
+.orientation-text-container-phone {
+  border: 1px solid purple;
+  margin: 0 16px 16px 16px;
+
+}
+
+.orientation-img-mobile {
+  width: 100%;
+  border: 1px solid red;
+
+}
+
 /* learning section */
 
 .learning {
@@ -168,6 +205,31 @@
   padding: 0;
 }
 
+/* learning mobile */
+
+.learning-mobile {
+  border: 1px solid blue;
+  width: 100%;
+  text-align: center;
+}
+
+.learning-2-mobile {
+  display: flex;
+  flex-direction: column;     /* make main axis horizontal (default setting) */
+  align-items: center;
+  justify-content: center;
+  border: 1px solid blue;
+  
+}
+
+.learning-box-mobile {
+  border: 1px solid green;
+  background-color: lightgrey;
+  padding: 16px 0 16px 16px;
+  margin: 8px 16px;
+  width: 90%;
+}
+
 /* thesis section */
 
 .thesis {
@@ -175,6 +237,10 @@
   width: 100%;
   background-color: white;
   text-align: center;
+}
+
+.thesis-video-mobile {
+  border: 1px solid purple;
 }
 
 video {
@@ -188,3 +254,44 @@ footer {
   height: 100px;
 }
 
+@media only screen and (max-width: 480px) {
+  .practice-img-container, .practice-container, .nav-text-container, .nav-container-right, .orientation-flex-container, .orientation-container, .orientation-img-container, .orientation-text-container, #sea-captain, .orientation-img, .learning, .learning-2, .learning-box {
+    display: none;
+  }
+  
+  .orientation-container {
+    justify-content: center;
+  }
+  
+  .nav-flex-container {
+    display: none;
+  }
+
+  video {
+    margin: 0;
+  }
+
+  .footer-mobile {
+    padding: 40px 16px 16px 16px;
+  }
+
+  footer {
+    height: 50px;
+  }
+
+}
+
+@media only screen and (min-width: 481px) {
+  .nav-container-phone {
+    display: none;
+  }
+
+  .nav-box-phone, .footer-mobile, .thesis-video-mobile, .learning-box-mobile, .learning-2-mobile, .learning-mobile {
+    display: none;
+  }
+
+  .orientation-flex-container-phone, .orientation-container-phone, .orientation_img_container-phone, .orientation-text-container-phone, .learning-mobile, .orientation-text-container-mobile {
+    display: none;
+  }
+
+}
